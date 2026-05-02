@@ -109,14 +109,13 @@
     }
 
     .share-row {
-      position: absolute;
-      right: 56px;
-      bottom: 40px;
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       gap: 14px;
-      z-index: 2;
+      margin-top: 16px;
     }
+    .share-row + .episodes { margin-top: 32px; }
 
     .share-btn {
       appearance: none;
@@ -232,7 +231,6 @@
       .hero-copy { max-width: 100%; }
       .episodes { grid-template-columns: 1fr; }
       .molecules { display: none; }
-      .share-row { position: static; justify-content: flex-end; margin: 24px 40px 32px; }
     }
 
     @media (max-width: 780px) {
@@ -296,6 +294,20 @@
             <p class="hero-frame">Built to be heard as a story, not journalism.</p>
           </div>
         </section>
+
+        <div class="share-row">
+          <span class="share-toast" role="status" aria-live="polite">Link copied</span>
+          <button type="button" class="share-btn" aria-label="Share this page">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+            Share
+          </button>
+        </div>
 
         <section class="episodes">
           <article class="episode-card">
@@ -369,27 +381,13 @@
           <div class="footer-icon">◉</div>
           <div>
             <p class="footer-text">
-              This unofficial podcast draws extensively from publicly available sources, along with informal conversations with people at the company. It is intended as a concise, audience-friendly telling of Madrigal’s story, NOT an official company history.
+              This unofficial podcast draws extensively from publicly available sources & informal conversations with people who were there. It is intended as a concise, audience-friendly telling of Madrigal’s story, NOT an official company history. This effort is not affiliated with, endorsed by, or produced by Madrigal; it is just one employee’s attempt to piece together and tell the story in a clear, human way.
             </p>
             <p class="footer-text">
-              Some artistic license has been taken, but the story is grounded in fact. Quoted dialogue is reconstructed from memory of conversations. Voices are performed by actors; no actual colleagues are speaking. AI narration has come a long way, but for lines in a story like this, humans still do it better (as of 2026), which is why they got the parts.
+              Artistic license has been taken, but the story is generally grounded in fact. Quoted dialogue is reconstructed from memory: in some cases the exchanges were relayed secondhand, rather than directly by the people named. Voices are performed by actors; no actual colleagues are speaking. AI narration is nearly there, but for lines in a story like this, humans still do it better (in 2026), which is why they got the parts.
             </p>
           </div>
         </section>
-      </div>
-
-      <div class="share-row">
-        <span class="share-toast" role="status" aria-live="polite">Link copied</span>
-        <button type="button" class="share-btn" aria-label="Share this page">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="18" cy="5" r="3"></circle>
-            <circle cx="6" cy="12" r="3"></circle>
-            <circle cx="18" cy="19" r="3"></circle>
-            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-          </svg>
-          Share
-        </button>
       </div>
     </section>
   </main>
